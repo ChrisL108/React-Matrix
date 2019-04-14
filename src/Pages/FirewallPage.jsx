@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-// import ProviderPropsContext from '../App';
-import { firewallProps } from '../Data/PropertyGroups/firewallProps';
+import React, { useContext } from 'react';
+import { FirewallPropsContext } from '../Data/ContextStore';
 
-export default function GeneralPage() {
-    const [providerProps, setProviderProps] = useState({ ...firewallProps });
+function FirewallPage() {
+    const { firewallProps, setfirewallProps } = useContext(
+        FirewallPropsContext
+    );
 
     return (
         <>
             <h3>Firewall Section</h3>
+            <p>{JSON.stringify(firewallProps)}</p>
         </>
     );
 }
+
+export default FirewallPage;

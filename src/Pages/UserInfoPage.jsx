@@ -1,30 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+// import Input from '@material-ui/core/Input';
+// import InputLabel from '@material-ui/core/InputLabel';
+import { FormGroup, TextField, InputLabel, Input } from '@material-ui/core';
 
 export default function UserInfoPage() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-  useEffect(() => {
-    console.log(`
-      Username is ${username}
-      Password Set? ${password.length > 0}
-    `);
-  });
+    useEffect(() => {
+        console.log(`
+          Username is ${username}\n
+          Password Set? ${password.length > 0}
+        `);
+    });
 
-  return (
-    <>
-      <input
-        name="username"
-        type="text"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
-      />
-      <input
-        name="password"
-        type="password"
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-      />
-    </>
-  );
+    return (
+        <>
+            <FormGroup>
+                <TextField
+                    id="username"
+                    label="Username"
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
+                    margin="normal"
+                    variant="filled"
+                />
+
+                <TextField
+                    id="password"
+                    label="Password"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                    margin="normal"
+                    variant="filled"
+                    type="password"
+                />
+            </FormGroup>
+        </>
+    );
 }

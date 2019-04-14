@@ -2,8 +2,8 @@ import React, { createContext, useState } from 'react';
 import { providerProps as provProps } from './providerProps';
 import { firewallProps as fwProps } from './PropertyGroups/firewallProps';
 
-export const ProviderPropsContext = createContext();
-export const FirewallPropsContext = createContext();
+export const ProviderPropsContext = createContext({});
+export const FirewallPropsContext = createContext({});
 
 export default function ContextStore({ children }) {
     const [providerProps, setProviderProps] = useState({ ...provProps });
