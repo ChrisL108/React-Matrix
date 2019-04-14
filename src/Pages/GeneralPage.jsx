@@ -1,13 +1,8 @@
 import React, { useContext } from 'react';
-import { ProviderPropsContext } from '../App';
-
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Input from '@material-ui/core/Input';
-import { MenuItem, InputLabel, FormHelperText } from '@material-ui/core';
+import { ProviderPropsContext } from '../Data/ContextStore';
 
 function GeneralPage() {
-    // const [providerProps, setProviderProps] = useContext(ProviderPropsContext);
+    const [providerProps, setProviderProps] = useContext(ProviderPropsContext);
 
     return (
         <>
