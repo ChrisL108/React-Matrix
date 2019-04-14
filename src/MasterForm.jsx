@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import GeneralPage from './Pages/GeneralPage';
+import FirewallPage from './Pages/FirewallPage';
 import UserInfoPage from './Pages/UserInfoPage';
-// import ProviderProps from "./Data/providerProps";
-import { ProviderPropsContext } from './App';
 
 function MasterForm() {
-    // const [providerProps, setProviderProps] = useContext(ProviderPropsContext);
-
     return (
         <>
+            {/* <SimpleSelect /> */}
             <GeneralPage />
+            <br />
+            <FirewallPage />
             <br />
             <UserInfoPage />
             <br />
